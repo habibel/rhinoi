@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script src="./files/jquery.min.js"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'يرجى تصحيح الأخطاء التالية'; 
+
+        orderValidator.errorNameField = 'الاسم'; 
+        orderValidator.errorNameMess = 'أدخل أسمك'; 
+        
+        orderValidator.errorPhoneField = 'رقم التليفون'; 
+        orderValidator.errorPhoneMess = 'أدخل رقم الهاتف الصحيح'; 
+        
+        orderValidator.errorAddress = 'أدخل العنوان الصحيح'; 
+        orderValidator.errorRequired = 'يتطلب حقلا'; 
+        orderValidator.errorMaxLength = 'حرف {1} بحد أقصى صالح'; 
+        orderValidator.errorMinLength = 'الحد الأدنى لعدد حروف {1}'; 
+        orderValidator.errorEmailField = 'البريد الإلكتروني';
+        orderValidator.errorEmail = 'تم تحديد بريد إلكتروني غير صالح';
+        }
+    </script>
+    
+<script>
+
+
+window.app = {
+    timestamp: parseInt((new Date()).getTime() / 1000),
+    jq: jQuery,
+    formAction: window.location.href,
+    leadToken: '642ce314d4caa5.29523395',
+    offers: {"33437":{"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
+    currentOffer: {"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
+    allowedCountries: ["DZ"],
+    _setOfferId: false,
+    streamHid: '',
+    showcaseUrl: '',
+    disablePhoneMask: Boolean(),
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },
+
+    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },
+
+    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }
+
+};
+
+
+</script><script src="./files/form.validate.js"></script>
+<script src="./files/interPhoneCodes.js"></script>
+<script src="./files/showcase.js"></script>
+<script src="./files/form.incomplete.js"></script>
+<script src="./files/main2.js"></script>
+
+
+
+
+    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>  مشاكل الضعف الجنسي و كيفية التخلص منها </title>
+    <link rel="stylesheet" href="./files/ruletka_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./files/css2" rel="stylesheet">
+
+    <link href="./files/A.style.css.pagespeed.cf.oWuMCmAoIj.css" rel="stylesheet" type="text/css">
+    <link href="./files/A.font-awesome.css.pagespeed.cf.1TvfEM1jGG.css" rel="stylesheet">
+    <link href="./files/A.main.css.pagespeed.cf.FH1PnlBS6g.css" rel="stylesheet">
+    <link href="./files/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./files/product.png" type="image/x-icon">
+    <link rel="stylesheet" href="./files/A.modal-consultform.css.pagespeed.cf.aU2xg2_ntD.css">
+    <script src="./files/jquery.min(1).js"></script>
+  
+
+
+<style>
+       #blo {
+        border: none;
+color: white;
+text-transform: uppercase;
+padding: 20px 10px;
+text-align: center;
+font-size: 22px;
+font-weight: bold;
+background: rgb(84, 242, 249);
+background: -moz-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+background: -webkit-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+background: linear-gradient(to bottom, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54f2f9', endColorstr='#18a1a7', GradientType=0);
+border-bottom: 4px solid #0f6b6f;
+border-radius: 10px;
+z-index: 2; padding-bottom: 6px;    bottom: 10px;
+
+    }
+   
+#btttt{
+    display: block;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    left: 7%;
+    bottom: 10px;
+
+    background: rgb(84, 242, 249);
+    background: -moz-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+    background: linear-gradient(to bottom, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54f2f9', endColorstr='#18a1a7', GradientType=0);
+    border-bottom: 4px solid #0f6b6f;
+    border-radius: 10px;    padding-bottom: 6px;
+
+    z-index: 2;
+}
+</style></head>
+
+
+<body class="page page--inner breakpoint-900">
+    <header class="header">
+        <a id="blo" href="Symptoms of impotence.html">  Français </a>
+
+        <div class="header__in container cf">
+            <div class="header__cell header__logo">
+                <a href="#form" class="logo all">
+                  
+                    <div class="logo__text">
+                        <span class="logo__uppercase" href="#form">صحتك </span><br> هنا 
+                    </div>
+                </a>
+            </div>
+            <div class="menu header__cell">
+                <nav class="menu header__menu" style="">
+                    <a class="menu__link menu all" href="#form">الصحة <br>
+</a> <a class=" menu__link all" href="#form">التعليم<br>
+</a> <a class=" menu__link all" href="#form">الضعف الجنسى<br>
+</a> <a class=" menu__link all" href="#form">مشاكل الرجال <br>
+</a>
+                    <div class="user-block">
+                        <div class="user-block__info">
+                            <div class="user-block__login"></div>
+                        </div>
+                        <div class="user-block__action">
+                            <a class="btn user-block__btn user-block__btn--login" data-modal="autorization" href="#form">دخول</a><br>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <a href="#form" class="menu-toggle">
+                <div class="menu-toggle__line"></div>
+                <div class="menu-toggle__line"></div>
+                <div class="menu-toggle__line"></div>
+            </a>
+        </div>
+        <div class="header__in container cf">
+            <p class="actual-info">تم نشر هذا المقال بتاريخ :
+                <script>
+                    var d = new Date();
+                    var day = d.getDate();
+                    var month = d.getMonth() + 1;
+                    var year = d.getFullYear();
+                    document.write(day + "." + month + "." + year);
+                </script>5.4.2023
+            </p>
+        </div>
+    </header>
+    <div class="content-wrap">
+        <div class="main" style="">
+            <div class="contentBox">
+                <h2 dir="rtl">التخلص من مشاكل الضعف الجنسي أمر سهل و بسيط .
+                </h2>
+                <hr style="border: 1px solid rgb(204, 0, 0);">
+                <center>
+                    <img src="./files/xGpy0aFNEbOlRbTXuaCsjMu12Qi5kQtVz.jpg.pagespeed.ic.DV_soX1pqD.jpg" style="width: 100%;">
+                    <p dir="rtl"><strong> Uvatov Oleg Valerievich   (أوڨاتوڨ أوليغ ڨاليريڨيتش)</strong>  متخصص في الطب العام. مهمته كطبيب عام هي توفير الرعاية الطبية الأولية. يتضمن هذا 
+                         التخصص الطبي إجراء الممارسة الطبية في عدة مجالات: أمراض القلب والجهاز الهضمي وأمراض الروماتيزم وأمراض الذكورة والمسالك البولية.</p>
+                </center>
+                <hr style="border: 1px solid rgb(204, 0, 0);">
+                <div class="qoute">
+                    <p><strong>تذكر الحقيقة دائماً، ولا تستمع إلى أي شخص: الضعف الجنسي يمكن التخلص منه دائمًا </strong>
+                    </p>
+                    <img src="./files/xright-quote.png.pagespeed.ic.qTzFU0SbNu.webp" alt="">
+                </div>
+
+                <div>
+                   
+                </div>
+                <p>طلبنا من دكتور أوليغ وهو دكتور في العلوم الطبية أن يخبرنا بالمزيد عن مشاكل الضعف الجنسي وكيفية حلها و التخلص منها بأسهل الطرق.</p>
+                
+                <p>الموضوع الذي لدينا اليوم ذكوري تمامًا - الضعف الجنسي. لكن، مع ذلك، أريد أن ترى جميع النساء هذا المقال، لا يذهب الرجال في كثير من الأحيان إلى الطبيب في بداية المشكلة، بل يتحملون، ويحاولون التخلص من مشاكل الضعف الجنسي ببعض من الطرق الشعبية. ويمكن للمرأة أن تنير طريق الرجل وتوجهه إلى الطريق الصحيح.</p>
+                <p>لذلك موضوعنا اليوم عن الضعف الجنسي. كيف تحمي نفسك من هذه المشكلة؟ هل هذا ممكن؟ كيف تتخلص من الضعف الجنسي؟</p>
+                <p><strong>إيرينا : "مرحبًا ، دكتور أوليغ . أخبرني، هل العبارة صحيحة بأن الضعف الجنسي هو رفيق" إلزامي "لسن الرجل الناضج؟"</strong></p>
+                <p><strong>الطبيب اوليغ  :</strong> "مرحبًا إيرينا ! بالطبع، هذا ليس صحيحًا. الضعف الجنسي يمكن التخلص منه بشكل مثير للدهشة في أي عمر. ليست معجزة، بل علم عادي.</p>
+                <p>علاوة على ذلك، إذا كنت تعرف السر وقمت بتطبيق القليل من الانضباط، فمن الممكن التعافي حتى في المنزل وبسرعة كبيرة ، وهو ما يفعله الآلاف من مرضاي ".</p>
+                <p><strong>إيرينا  : "و ما هو هذا السر ؟"</strong></p>
+                <p><strong>علي لسان الطبيب اوليغ :</strong> " الضعف الجنسي هو في الحقيقة مشكلة كبيرة للغاية ، وبدون حل مناسب ، فإنها قد تسبب
+                    الضغط النفسي وتؤثر على ثقتك بنفسك وتسهم في نشوب مشكلات في العلاقات، وأكثر من ذلك بكثير.
+                   </p>
+                <p>
+                    والسر يكمن في فهم سبب المشكلة. تمضي الإثارة الجنسية في الذكور وفق عملية معقدة يشترك فيها الدماغ والهرمونات والمشاعر والأعصاب والعضلات والأوعية الدموية. وقد يسبب وجود مشكلة في أي من هذه العوامل ضعف الانتصاب. وقد يسبب الإجهاد ومشكلات الصحة العقلية كذلك ضعف الانتصاب أو تفاقم الحالة.
+                    
+                </p>
+                <p>وأحيانًا يسبب مزيج من المشكلات الجسدية والنفسية ضعف الانتصاب. فمثلاً، قد يؤدي مرض بدني بسيط يبطئ استجابتك الجنسية إلى شعورك بالقلق بشأن الحفاظ على الانتصاب. ومن شان هذا القلق الناتج أن يؤدي إلى ضعف الانتصاب أو تفاقم الحالة.</p>
+                <p>في كثير من الحالات، يحدث ضعف الانتصاب نتيجة لسبب جسدي. وتتضمن الأسباب الشائعة:</p>
+                <p>
+                    •	مشاكل في القلب
+•	انسداد الأوعية الدموية (تصلب الشرايين)
+•	ارتفاع الكوليستيرول
+•	ارتفاع ضغط الدم
+•	السكري
+•	السُمنة
+•	متلازمة التمثيل الغذائي — وهي حالة تتضمن ارتفاع ضغط الدم، وارتفاع مستويات الأنسولين، وتراكم دهون الجسم حول منطقة الخصر وارتفاع مستوى الكوليستيرول
+•	مشاكل باركنسون
+•	التصلُّب المتعدد
+
+                </p>
+                <img style="    border-radius: 20px;" src="./files/ddqewault.jpg" alt="">
+                      <p><strong>إيرينا : "ما هي أولى علامات الخطر بعد سن الأربعين؟"</strong></p>
+                <p><strong>علي لسان الطبيب اوليغ :</strong>قد يحتاج الانتصاب - مع تقدمك في العُمر - وقتًا أطول ليحدُث، وقد لا يكون بالصلابة الكافية. وربما تحتاج إلى لمس العضو الذكري مباشرة للوصول إلى الانتصاب والحفاظ عليه.</p>
+                
+                
+                <ul>
+                    <li>	انخفاض الرغبة الجنسية </li>
+                    <li>	سرعة القذف أو مشاكل في تحقيقه</li>
+                    <li>ضعف القذف</li>
+                    <li>الشعور بالتعب بسرعة وتهيج الجسم</li>
+                    <li>عدم القدرة على الإنجاب من شريك حياتك</li>
+                    <li>الحالات النفسية، مثل التوتر أو القلق أو الاكتئاب</li>
+                </ul>	
+
+              
+             <img style="    border-radius: 20px;" src="./files/nashakel.jpg" alt="">
+               
+                
+                <p><strong>إيرينا : " و كيف  يمكن التخلص من الضعف الجنسي في هذا العمر؟"</strong></p>
+                <p><strong>علي لسان الطبيب اوليغ :</strong> " حتى وقت قريب ، كنت أعالج الناس ، مثل جميع الأطباء في العالم . حتى الآن ، يصف الأطباء انه بالنسبة إلى الكثير من الأشخاص، يُعدُّ الفحص الطبي والإجابة عن أسئلة مهين للرجال ، وإجراءات العلاج الطبيعي المختلفة:.</p>
+                <p>
+                    <ul>
+                        <li> 	الفحص البدني. وقد يشمل ذلك إجراء فحص دقيق العضو الذكري والفولتين وفحص الأعصاب للتحقق من الإحساس.</li>
+                        <li> 	اختبارات الدم. قد يتم إرسال عينة من دمك إلى المختبر للكشف عن مؤشرات مشاكل القلب وداء السكري وانخفاض مستويات هرمون التستوستيرون و مشاكل أخرى.</li>
+                        <li> 	اختبارات البول (تحليل البول). مثل اختبارات الدم، يتم استخدام اختبارات البول للبحث عن مؤشرات داء السكري والمشاكل الكامنة الأخرى.</li>
+                        <li> 	الألتراساوند (محوِّل الطاقة فوق الصوتي). يتم إجراء هذا الاختبار عادة على يد متخصص في المختبر. ويتضمن استخدام جهاز يشبه العصا (محوِّل الطاقة) يُثبت على الأوعية الدموية التي تُمدّ العضو الذكري بالدم. ويقدم صورة فيديو ليتسنى للطبيب التعرّف على ما إذا كانت لديك مشكلات في تدفق الدم أم لا.
+                            ويتم إجراء هذا الاختبار أحيانًا مع حقن أدوية داخل العضو الذكري لتحفيز تدفق الدم وحدوث الانتصاب.</li>
+                        <li> 	الفحص النفسي. قد يطرح عليك الطبيب بعض الأسئلة للتعرف على ما إذا كنت مصابًا بالاكتئاب أو بحثًا عن أسباب نفسية أخرى محتملة لضعف الانتصاب. </li>
+                    </ul>
+                    لكن أسوأ شيء هو أنه حتى مع استخدام طرق العلاج المؤلمة والمكلفة والخطيرة هذه ، لا يزال الضعف الجنسي لا يختفي ، ولكنه يستمر في التطور. لأنه إذا كانت المضادات الحيوية تساعد على حل للمشكلة ، فعندئذ فقط لفترة من الوقت. بعد شهر او شهرين ترجع المشكلة من البداية في الواقع تتطور المشكلة من المرحلة الاولى الى المرحلة الثانية و الثالثة ...
+                    </p>
+                <p>اعتقدت أنه يجب أن تكون هناك طريقة أكثر حداثة وأسهل – و بالفعل لقد وجدت هذه الطريقة !"</p>
+                
+                <p><strong>إيرينا : "رائع ! هل ستخبرنا  عن هذه الطريقة التي اكتشفتها ؟ "</strong></p>
+                <p><strong>علي لسان الطبيب اوليغ :</strong> "أنا أتحدث عن المكمل الغذائي    "<a href="#form">RHINO</a>هذا مكمل غذائي يكافح السبب الأساسي للمشكلة
+                    في أقصر وقت ممكن ، حرفيًا في خلال أيام ، وحتى الحالات الصعبة جدًا يمكن تحسينها في غضون شهر.</p>
+                <p>تم إنفاق الكثير من المال على تطوير هذا المكمل الغذائي .</p>
+                <p><strong>إيرينا : "هل يمكنك ان تخبرنا من أين عرفت هذا المنتج  ؟ "</strong></p>
+                <p>
+                    "عن طريق أصدقائي  بالخارج و قد نصحوني به و أيضاً أرسلوا لي عبوات لأجربها و بالفعل كانت النتائج مذهلة لكل من نصحته بإستخدام هذا المنتج الرائع  و الأن نريد ان يكون 
+                    للجزائريين الحق في شراء مثل هذا المنتج الرائع و لا نحرمهم منه "
+                </p>
+                <p><strong> إيرينا : وكيف يعمل هذا المنتج  المعجزة؟</strong></p>
+                <p><strong>علي لسان الطبيب اوليغ :</strong> "لا توجد معجزة هنا ، إنه علم بحت . تركيبة المنتج تشمل مقتطفات من النباتات الطبيعية
+                     ، ولا يحتوي على كيمياء. التركيب متوازن بعناية و طبيعي 100% ، مما له تأثير فعال  على مشكلة الضعف الجنسي  ، مما يزيد من فعاليته ".</p>
+                <p>في العموم  ، تشتمل تركيبة المنتج على حوالي الكثير من المكونات الطبيعية . لن أسرد كل المكونات  ، سأقول  فقط القليل منها.</p>
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td>الخوخ الافريقي</td>
+                            <td> إن الخوخ الأفريقي يحتوي على مجموعة من العناصر الغذائية الهامة مثل الفيتامينات والألياف والبوتاسيوم، والتي تساهم في دعم الصحة العامة والمناعة.
+                                يستخدم أيضاً كمكمل غذائي عشبي؛ للمساهمة في  تعزيز صحة الرجال الجنسية، وزيادة قدرة الرجال عمومًا على التحمل خلال العملية الجنسية.                                
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>نبات القراص </td>
+                            <td>يساعد تناول مستخلص نبات القراص بانتظام على حماية الرجال من العديد من المشكلات التي قد يتعرض لها مع التقدم في العمر، مثل: مشكلة الضعف الجنسي
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> السيليكا الغروية </td>
+                            <td> السيليكا الغروية هي مادة معدنية تحتوي على الأوكسجين والهيدروجين   التي تساعد  الأوعية الدموية على ُمدّ العضو الذكري بالدم
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ستيرات   المغنيسيوم</td>
+                            <td> يمكن أن تساعد في تخفيف الأعراض المرتبطة بمشاكل الضعف الجنسي ، كما أن المغنيسيوم يساعد في تحسين الأداء الجنسي عن طريق تحسين صحة القلب والأوعية الدموية وزيادة مستويات الأكسجين في الجسم</td>
+                        </tr>
+                        
+                       
+                    </tbody>
+                </table>
+                <div style="text-align: center;"><img src="./files/product.png" style="max-width: 97%;"></div>
+
+                <p><strong>إيرينا : "يبدو هذا مثيرًا للإعجاب. فقط اشرح لنا ماذا يعني هذا للأشخاص العاديين المصابين بمشاكل الضعف الجنسي  ؟"</strong></p>
+
+                <p><strong>علي لسان الطبيب اوليغ :</strong> "هذا يعني أن
+                     طب العصور الوسطى أصبح شيئًا من الماضي ، ويمكنك التخلص من  مشاكل الضعف الجنسي   في المنزل في غضون أسابيع ، إذا كنت تستخدم  "
+                     <a href="#form">RHINO</a>"
+                     سوف تتخلص من الضعف الجنسي (يتم التخلص من الاحتقان ، وعودة الدورة الدموية للعضو الذكري إلى طبيعتها). ماذا يعني المرور تمامًا؟ وهذا يعني أنه نتيجة لمثل هذا المكمل الغذائي ، لن يكون الضعف الجنسي مرة أخرى بعد فترة . سوف تتخلص من مشاكل الانتصاب سيعود الرجل إلى طبيعته ويصبح الرجل بصحة جيدة تماما ".
+                    </p>
+                <p>
+                    <strong>إيرينا : "هل قلت سابقًا أنه يمكن الحصول على <a href="#form">RHINO</a> بسعر مخفض ، بخصم50 ٪؟ يمكن لأي شخص القيام بذلك؟"</strong></p>
+                <p>
+                    <strong>علي لسان الطبيب اوليغ :</strong> 
+                    نعم ، أي شخص الجزائر يمكنه الحصول عي تخفيض بنسبة 50 % عي سعر المكمل الغذائي 
+                    <a href="#form">RHINO</a> 
+                    . أسسنا خدمة   التوزيع المباشر لـ   
+                     <a href="#form">RHINO</a> 
+                     بدون وسطاء للتوزيع . ناقشنا عدة خيارات واستقرينا على أكثرها فاعلية. الشخص الذي يريد شراء هذا المنتج , عليه ان يسجل إسمه و رقم هاتفه في النموذج بالأسفل و  الآن كل شخص لديه إنترنت  يستطيع طلب 
+                     <a href="#form">RHINO</a> 
+                    ، حتى لو لم يكن لدى الشخص جهاز كمبيوتر ، فغالبًا ما يكون لديه هاتف متصل بالإنترنت ، ويمكن للجميع التقدم بالطلب الأن .  التخفيض علي سعر المنتج ساري حتى : 
+
+
+
+
+
+
+                    <script>
+                        d = new Date();
+                        p = new Date(d.getTime() - 7 * 86400000);
+                        monthA = 'يناير ,فبراير,مارس,ابريل,مايو,يونيو,يوليو,اغسطس,سبتمبر,اكتوبر,نوفمبر,ديسمبر'.split(',');
+                        document.write(p.getDate() - 0 + ' ' + monthA[p.getMonth()] + ' ' + p.getFullYear());
+                    </script>29 مارس 2023(ضمناً) ستحصل على تخفيض بنسبة 50% نتمنى ان كل شخص إستخدم المنتج بالفعل ان يضع تعليق  بالأسفل و يخبرنا عن تجربته  ".
+                   </p>
+                <p><strong>إيرينا : وكم تكلفة هذا  المنتج ؟</strong></p>
+                <p><strong>علي لسان الطبيب اوليغ :</strong> "تكلفة إنتاج هذا المنتج ضخمة للغاية و لكن نحن  نفهم أهمية جعل مثل هذا المنتج متاحًا للجميع في الجزائر ..</p>
+                <p>للطلب كل ما عليك هو : </p>
+                <ul>
+                    <li>ملئ النموذج الرسمي للطلب بالأسفل </li>
+                    <li> بعد ذلك سوف يتم التواصل معك لتأكيد عنوان الوصول </li>
+                    <li> يتم الدفع فقط بعد إستلام المنتج و هو الشيء الذي جعل الكثير مطمئنون من جودة هذا المنتج </li>
+                    <li> بعد ذلك يمكنك إستلام المنتج عن طريق البريد او عن طريق عامل التوصل </li>
+                </ul>
+                <p><strong>إيرينا : " أوليغ فاليريفيتش ، شكرًا لك على المقابلة! ربما تريد أن تقول شيئًا لقرائنا قبل أن نقول وداعًا؟"</strong></p>
+                <p><strong>علي لسان الطبيب اوليغ :</strong> 
+                    نعم! بالتأكيد. أود أن ألفت انتباه القراء إلى حقيقة أن مشاكل الضعف الجنسي تزداد يوماً بعد يوم و حتى عند الشباب ، وحتى الألم الدوري الخفيف هو سبب للإنتباه إلى المشكلة.</p>
+                <p><strong>وتذكروا : المشاكل  الناتجة عن الضعف الجنسي  لا تسبب فقط الإنزعاج. بل تؤثر على مدى إطالة عمرك  بمقدار 10-15 سنة."</strong></p>
+                <div id="form-block">
+                    <p id="roll"></p>
+                    <h3 style="text-align:center">كل من سيطلبون المنتج بتاريخ :
+                        <script>
+                            d = new Date();
+                            p = new Date(d.getTime() + 0 * 86400000);
+                            monthA = 'يناير ,فبراير,مارس,ابريل,مايو,يونيو,يوليو,اغسطس,سبتمبر,اكتوبر,نوفمبر,ديسمبر'.split(',');
+                            document.write(p.getDate() - 0 + ' ' + monthA[p.getMonth()] + ' ' + p.getFullYear());
+                        </script>5 ابريل 2023 سيستطيعون الحصول علي تخفيض 50% على سعر المنتج .</h3>
+                </div>
+                <img src="./files/tawseel.png" alt="">
+                <div class="ruletka-p" style="
+    text-indent: 0;
+    color: #000;
+    text-align: center !important;
+    margin: 15px;
+    line-height: 25px;
+    font-weight: 700;
+" id="roulette">
+                    <h2>تحذير! إحذروا المنتجات المقلدة </h2>
+                    <form id="form" style="border: 2px solid black;" action="#form" method="post" autocomplete="on">
+                        <div>يمكنك الحصول علي RHINO في الجزائر عن طريق ملئ هذا النموذج </div>
+                        <div><img src="./files/product.png" style="max-width: 300px;"></div>
+                        <div>
+                            <h3 style="    font-size: 24px;">السعر قبل التخفيض <span style="text-decoration: line-through;"><x-oldprice>11998</x-oldprice><x-currency>DA</x-currency></span></h3>
+                            <h3 style="  margin-bottom: 0;  font-size: xx-large;" class="glow">السعر بعد  التخفيض <span><x-newprice>5999</x-newprice><x-currency>DA</x-currency></span></h3>
+                            <p style="padding: 0; text-align: center;">عند شرائك دورة RHINO </p>
+                        </div>
+                        <div style="text-align: center;">
+                                <input name="csrf_token" type="hidden" value="25f4ba378d77425e3a5e4c8fdef92abb:1680663317">
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="DZ" selected="selected" value="33437">
+            Алжир        </option>
+    </select>
+
+    
+                            <input style="padding: 10px;border-radius: 15px;animation: none;border: none; margin: auto; display: block;" type="text" name="name" placeholder="ادخل إسمك " autocomplete="name" required="required">
+                            <input style="padding: 10px;border-radius: 15px;animation: none;border: none;margin: auto;margin-top: 20px;margin-bottom: 20px; display: block;direction: ltr; text-align: right;" type="tel" name="phone" placeholder="+213" autocomplete="tel" required="required">
+                        </div>
+                        <button id="luckyshop_form" type="submit" class="x_order_form" style="margin: 0 auto; border: 0; background: transparent">
+                            <div class="submit-roulette">تقديم طلب الشراء الأن </div>
+                            
+                        </button>
+                      
+                    </form>
+                    <style>
+
+                        .glow{
+                          color:black;
+                          font-weight: bold;
+                          animation-name:glow;
+                          animation-duration:0.5s;
+                          animation-iteration-count:infinite;
+                          animation-direction:alternate;
+                        }
+                        
+                        @keyframes glow{
+                          from{text-shadow:0px 0px 5px #fff,0px 0px 0px #ff0000;}
+                          to{text-shadow:2px 20px 20px #fff,0px 10px 50px #ff0000;}
+                        }
+                                    </style>
+                    
+                </div>
+               
+                <div class="order_block" style="display: block;">
+                  
+                   
+                  
+                </div>
+              
+                <p></p>
+            </div>
+            <br>
+            <div class="vk-container">
+                <div class="vk-header">
+                    <div class="vk-logo"></div>
+                    <div class="vk-header-text">
+                        <span class="comment-count">194 تعليقات اليوم </span>
+                    </div>
+                </div>
+                <div class="commit">
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_01.jpg" class="photo-people"></div>
+
+                        <div class="com-txt"><b>سناء محمد</b>
+                            <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">أحتاج أن أطلب هذا المكمل الغذائي لزوجي. لا يعرف كيف يتخلص من الضعف الجنسي. لم نمارس علاقة حميمية منذ أكثر من عام</p>
+                          
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_02.jpg" class="photo-people"></div>
+
+                        <div class="com-txt"><b>جميلة  </b>
+                            <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">مجرد منتج رائع للتخلص من من الضعف الجنسي. لقد ساعد زوجي كثيرا. أنصح به لجميع أولئك الذين يعانون من مشاكل الضعف الجنسي شكرًا جزيلاً</p><br>
+                            
+                            <img style="  margin-top: 20px;  max-width: 69%;" src="files/comm0.jpg" alt="">
+                           </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                    <div class="photo"><img src="./files/commit_03.jpg" class="photo-people"></div>
+
+                        <div class="com-txt"><b>عبد الحميد</b>
+                            <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">أعاني من الضعف الجنسي منذ سنين . خلال هذا الوقت ، حاولت التخلص من مشاكل الضعف الجنسي أكثر من خمس مرات بشتى الطرق، فقط هذا المنتج ساعدني على التخلص من المشكلة, لذلك أنصح كل من لديه الضعف الجنسي ان يستخدم هذا المنتج عن تجربة </p>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_04.jpg" class="photo-people"></div>
+
+                            <div class="com-txt"><b>أروى</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">•	طلبته لزوجي ، وهو يبلغ من العمر 68 عامًا. يعاني من الضعف الجنسي لمدة عامين. في الشهر الماضي ، ذهب لإجراء الألتراساوند  - لن تتمنى ذلك لعدوك ، إنه شيء مهين جداً ، ولكن في النهاية تبين أن هناك حل عن طريق إستعمال RHINO و هو منتج بالفعل يستحق الشكر !.
+                                    !</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_05.jpg" class="photo-people"></div>
+
+                            <div class="com-txt"><b></b><p><b>مودة</b>
+                                <br>رائع! لقد طلبته و حصلت علي خصم 50% عند شرائي RHINO .</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_07.jpg" class="photo-people"></div>
+
+                            <div class="com-txt"><b>محمد </b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">حصلت عليه في البريد اليوم. لم أصدق أنه يمكنك الحصول على خصم 50٪! شكراً جزيلاً!</p>
+                                <br>
+                                <img style="  margin-top: 20px;  max-width: 69%;" src="files/comm1.jpg" alt="">
+                               </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_06.jpg" class="photo-people"></div>
+
+                            <div class="com-txt"><b>أنور</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">لدي خبرة في جيدة استخدام RHINO   إنه يثير الإعجاب بعمله. وهو أمر إيجابي . يزول الضعف الجنسي  بسرعة كبيرة حتى بدون تدليك .</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_08.jpg" class="photo-people"></div>
+      
+                            <div class="com-txt"><b>سمير</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                    أنا أؤكد تماما! RHINO هو منتج ممتاز. كنت أعاني من الضعف الجنسي لمدة عام. لا أعرف ماذا أفعل. نصحني صديقي بـ RHINO . بدأت في تناوله ، في غضون أيام قليلة ، كل شيء ذهب مثل السحر. وزادت الفاعلية منه. أنصح به لأي شخص يعاني من الضعف الجنسي .
+                                    </p>
+                                    <br>
+                                <img style="margin-top: 20px;  max-width: 69%;" src="files/comm3.jpg" alt="">
+                            </div>
+                                
+                                </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_09.jpg" class="photo-people"></div>
+                            <div class="com-txt"><b>ياسين</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">أنصح الجميع بهذا المنتج!</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_10.jpg" class="photo-people"></div>
+                            <div class="com-txt"><b>صلاح</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">شكرا لكم ، لقد تلقيت خصم 50%! ، لقد طلبته. تم التواصل معي عبر الهاتف و قالوا لي انه  لم يتبق سوى القليل من العبوات للبيع .</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_11.jpg" class="photo-people"></div>
+                            <div class="com-txt"><b>آيات</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">شكراً لكم لقد إستخدمه زوجي و النتائج رائعة بالفعل ! </p>
+                                <br>
+                                <img style="  margin-top: 20px;  max-width: 69%;" src="files/comm4.jpg" alt="">
+                            
+                             
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_12.jpg" class="photo-people"></div>
+                            <div class="com-txt"><b>
+                                خلود</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                    RHINO هو أفضل منتج على الإطلاق! أنا أتفق مع الدكتور أوليغ وجميع المعلقين الذين أشادوا به. استخدمه زوجي منذ حوالي 3 أشهر. لقد ذهب الضعف الجنسي تمامًا! قبل ذلك ، كانت هناك معاناه لعدة سنوات ، بسبب هذه المشكلة كان عضوه الذكري لا ينتصب بقوه . الآن عاد كل شيء إلى طبيعته ونحن مرة أخرى مثل سعداء 
+                                    .</p>
+                                </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_13.jpg" class="photo-people"></div>
+                            <div class="com-txt"><b>منير</b>
+                                <br>شكراً لكم! لقد لحقت بالتخفيض . 
+                                <img style="  margin-top: 20px;  max-width: 69%;" src="./files/comm2.jpg" alt="">
+                            </div>
+                            <div class="clear"></div>
+
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_15.jpg" class="photo-people"></div>
+                            <div class="com-txt"><b>اسامة</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">في مارس ، اُصبت بالاكتئاب ، لمدة شهرين لم استطع فعل أي شيء ، في مارس ، نصحوني بهذا المنتج ، رغم أنني كنت متشككًا أيضًا في هذا المنتج . و لكن بعد شهر من الاستخدام ، زال الألم! نعم ، انا الأن شخص جديد! </p><br>
+                                </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="commit-text">
+                            <div class="photo"><img src="./files/commit_17.jpg" class="photo-people"></div>
+                            <div class="com-txt"><b> صباح</b>
+                                <br><p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">كان زوجي يعاني من الضعف الجنسي لفترة طويلة. لا شيء يساعده . ثم نصحه صديقه بهذا المكمل الغذائي . و بالفعل حدثت المعجزة! حقا ساعده   !!!</p></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div id="push-comments"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <center>
+                    <a href="#form" class="ord_button">
+                        <center>الحصول على RHINO الأن بتخفيض 50%!</center>
+                    </a>
+                    <center>
+                    </center>
+                </center>
+            </div>
+        </div>
+        <div class="sidebar" style="position: relative;">
+            <center>
+                <h4>معلومات عن ضيفنا اليوم </h4>
+            </center>
+            <img src="./files/oleg2.jpg" alt="">
+            <h1>دكتور أوليغ</h1>
+            <ul style="    list-style: disc !important;">
+                <li style="    list-style: disc !important;">
+                    الخبرة : 
+                    <span>خبرة 36 سنة </span>
+                </li>
+                <li style="    list-style: disc !important;">
+                    العمر :
+                    <span>57 سنة</span>
+                </li>
+                <li style="    list-style: disc !important;">
+                    التخصص :
+                    <span>رئيس قسم العلاج العام وطب الأسرة</span>
+                </li>
+                <li style="    list-style: disc !important;">
+                    مكان العمل :
+                    <span>المركز الطبي الأوروبي</span>
+                </li>
+                <li style="    list-style: disc !important;">
+                    التعليم :
+                    <br>
+                    <span> 
+                        <ul>
+                            <li style="    list-style: disc !important;">
+                                1984- جامعة روستوف الطبية الحكومية (الطب العام)
+                            </li>
+                        <li style="    list-style: disc !important;">
+                        1990- تدريب في جامعة روستوف الطبية الحكومية (الممارسة الطبية العامة (طب الأسرة))
+                    </li>
+                        <li style="    list-style: disc !important;">
+                        جامعة روستوف الطبية الحكومية (أمراض الجهاز الهضمي)(2007).
+                    </li>
+                        <li style="    list-style: disc !important;">
+                            جامعة روستوف الطبية الحكومية (العلاج)(2015).
+                        </li>
+                        <li style="    list-style: disc !important;">
+                            اجتاز التدريب على أساس جامعة روستوف الطبية الحكومية في دورة جراحة المسالك البولية(2016).
+                        </li>
+                        <li style="    list-style: disc !important;">
+                            اجتاز التدريب في جامعة روستوف الطبية الحكومية في دورة أمراض القلب(2020).
+                        </li>
+                    </ul>
+                    </span>
+                </li>
+
+            </ul>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <footer class="footer">
+        <center><p>Galaxy Trade LTD</p>
+<p>16 George street, London, UK. skype: Galaxy-trade, email: Galaxy-trade2000@gmail.com</p>
+
+
+    
+            <p class="conf-link doclinks">
+        <a class="nav-link" href="#form" onclick="window.open(policy_en.php); return false;">Privacy Policy</a>
+        <a class="nav-link" href="#form" onclick="window.open(terms_en.php); return false;">Terms &amp; Conditions</a>
+      </p>
+      
+    
+</center>
+
+
+    </footer>
+   
+   
+   
+    
+
+
+
+
+<div id="torrent-scanner-popup" style="display: none;"></div></body></html>

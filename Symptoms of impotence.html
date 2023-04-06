@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script src="./files/jquery.min.js"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'Veuillez corriger les erreurs suivantes'; 
+
+        orderValidator.errorNameField = 'le nom'; 
+        orderValidator.errorNameMess = 'Entrez votre nom'; 
+        
+        orderValidator.errorPhoneField = 'numéro de téléphone'; 
+        orderValidator.errorPhoneMess = 'Entrez votre numéro de téléphone'; 
+        
+        orderValidator.errorAddress = 'Entrez votre adresse'; 
+        orderValidator.errorRequired = 'nécessite un champ'; 
+        orderValidator.errorMaxLength = '{1} car est un max valide'; 
+        orderValidator.errorMinLength = 'nombre minimum de caractères {1}'; 
+        orderValidator.errorEmailField = 'Email';
+        orderValidator.errorEmail = 'Un e-mail invalide a été spécifié';
+        }
+    </script>
+    
+<script>
+
+
+window.app = {
+    timestamp: parseInt((new Date()).getTime() / 1000),
+    jq: jQuery,
+    formAction: window.location.href,
+    leadToken: '642ce330ee8121.53549156',
+    offers: {"33437":{"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
+    currentOffer: {"id":33437,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
+    allowedCountries: ["DZ"],
+    _setOfferId: false,
+    streamHid: '',
+    showcaseUrl: '',
+    disablePhoneMask: Boolean(),
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },
+
+    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },
+
+    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }
+
+};
+
+
+</script><script src="./files/form.validate.js"></script>
+<script src="./files/interPhoneCodes.js"></script>
+<script src="./files/showcase.js"></script>
+<script src="./files/form.incomplete.js"></script>
+<script src="./files/main2.js"></script>
+
+
+
+
+    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Se débarrasser des problèmes de faiblesse sexuelle est facile et simple.</title>
+    <link rel="stylesheet" href="./files/ruletka_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./files/css2" rel="stylesheet">
+    <link rel="shortcut icon" href="./files/product.png" type="image/x-icon">
+
+    <link href="./files/A.style.css.pagespeed.cf.oWuMCmAoIj.css" rel="stylesheet" type="text/css">
+    <link href="./files/A.font-awesome.css.pagespeed.cf.1TvfEM1jGG.css" rel="stylesheet">
+    <link href="./files/A.main.css.pagespeed.cf.FH1PnlBS6g.css" rel="stylesheet">
+    <link href="./files/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./files/A.modal-consultform.css.pagespeed.cf.aU2xg2_ntD.css">
+    <script src="./files/jquery.min(1).js"></script>
+
+
+<style>
+    #blo {
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        background: rgb(84, 242, 249);
+        background: -moz-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+        background: linear-gradient(to bottom, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54f2f9', endColorstr='#18a1a7', GradientType=0);
+        border-bottom: 4px solid #0f6b6f;
+        border-radius: 10px;
+        z-index: 2;
+        padding-bottom: 6px;
+        bottom: 10px;
+
+    }
+
+    #btttt {
+        display: block;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        position: absolute;
+        left: 7%;
+        bottom: 10px;
+
+        background: rgb(84, 242, 249);
+        background: -moz-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+        background: linear-gradient(to bottom, rgba(84, 242, 249, 1) 0%, rgba(24, 161, 167, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#54f2f9', endColorstr='#18a1a7', GradientType=0);
+        border-bottom: 4px solid #0f6b6f;
+        border-radius: 10px;
+        padding-bottom: 6px;
+
+        z-index: 2;
+    }
+</style></head>
+
+
+
+<body class="page page--inner breakpoint-900">
+
+<header class="header">
+    <a id="blo" href="مشاكل الضعف الجنسي.html">
+        عربي </a>
+
+    <div class="header__in container cf">
+
+        <div class="header__cell header__logo">
+
+            <a href="#form" class="logo all">
+
+                <div class="logo__text">
+
+                    <span class="logo__uppercase" href="#form">Votre  </span><br> santé
+                </div>
+            </a>
+        </div>
+        <div class="menu header__cell">
+            <nav class="menu header__menu" style="">
+                <a class="menu__link menu all" href="#form">La santé <br>
+                </a> <a class=" menu__link all" href="#form">L'éducation<br>
+            </a> <a class=" menu__link all" href="#form">l'impuissance<br>
+            </a> <a class=" menu__link all" href="#form"> Les problèmes masculins <br>
+            </a>
+                <div class="user-block">
+                    <div class="user-block__info">
+                        <div class="user-block__login"></div>
+                    </div>
+                    <div class="user-block__action">
+                        <a class="btn user-block__btn user-block__btn--login" data-modal="autorization" href="#form">Connexion</a><br>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <a href="#form" class="menu-toggle">
+            <div class="menu-toggle__line"></div>
+            <div class="menu-toggle__line"></div>
+            <div class="menu-toggle__line"></div>
+        </a>
+    </div>
+    <div class="header__in container cf">
+        <p class="actual-info">Cet article a été publié le :
+            <script>
+                var d = new Date();
+                var day = d.getDate();
+                var month = d.getMonth() + 1;
+                var year = d.getFullYear();
+                document.write(day + "." + month + "." + year);
+            </script>5.4.2023
+        </p>
+    </div>
+</header>
+<div class="content-wrap">
+    <div class="main" style="">
+        <div class="contentBox">
+            <h2 dir="rtl">Se débarrasser des problèmes de faiblesse sexuelle est facile et simple.
+
+            </h2>
+            <hr style="border: 1px solid rgb(204, 0, 0);">
+            <center>
+                <img src="./files/xGpy0aFNEbOlRbTXuaCsjMu12Qi5kQtVz.jpg.pagespeed.ic.DV_soX1pqD.jpg" style="width: 100%;">
+                <p dir="rtl"><strong> Uvatov Oleg Valerievich</strong> Sa mission en tant que médecin généraliste est de
+                    fournir des soins de santé primaires.
+                    Cette spécialité médicale comprend la pratique de la médecine dans plusieurs domaines, notamment les
+                    maladies cardiaques, le système digestif, les maladies rhumatismales, les maladies masculines et les
+                    voies urinaires. </p>
+            </center>
+            <hr style="border: 1px solid rgb(204, 0, 0);">
+            <div class="qoute">
+                <p><strong>"Rappelez-vous toujours la vérité et n'écoutez personne: la faiblesse sexuelle peut être surmontée à tout moment."
+                </strong>
+                </p>
+                <img src="./files/xright-quote.png.pagespeed.ic.qTzFU0SbNu.webp" alt="">
+            </div>
+
+            <div>
+
+            </div>
+            <p> Nous avons demandé au Dr. Oleg, qui est un médecin en sciences médicales, de nous en dire plus sur les problèmes de faiblesse sexuelle et comment les résoudre et s'en débarrasser facilement.
+            </p>
+
+            <p>Le sujet que nous avons aujourd'hui est tout à fait masculin - la faiblesse sexuelle. malgré cela, je veux que toutes les femmes lisent cet article. Les hommes souvent ne font pas une consultation dès le début du problème, mais supportent et essaient de se débarrasser des problèmes de faiblesse sexuelle avec quelques remèdes populaires. la femme peut éclairer le chemin de l'homme et le guider sur la bonne voie.
+            </p>
+            <p>Donc, notre sujet aujourd'hui est sur l'impuissance. Comment se protéger de ce problème ? c'est possible? Comment se débarrasser de la dysfonction érectile ?</p>
+            <p><strong>Irina : "Bonjour, Docteur Oleg. Dites-moi, est-ce vrai que l'impuissance  est un compagnon « obligatoire » à l'âge mûr d'un homme ?"
+            </strong></p>
+            <p><strong>Docteur Oleg : "Bonjour Irina ! Bien sûr, ce n'est pas vrai. l'impuissance est étonnamment réversible à tout âge. Pas un miracle, mais la science ordinaire."</strong></p>
+            <p>De plus, si vous connaissez le secret et appliquez un peu de discipline, il est possible de récupérer même à la maison et très rapidement, ce que font des milliers de mes patients."</p>
+            <p><strong>Irina : "Et quel est ce secret?"</strong></p>
+            <p><strong>Docteur Oleg répond : "l'impuissance est en réalité un grand problème , et sans solution appropriée, elle peut causer de la pression psychologique et affecter votre confiance en vous, ce qui peut entraîner des problèmes relationnels et bien plus encore.</strong></p>
+            <p>"Le secret réside dans la compréhension de la cause du problème. L'excitation sexuelle chez les hommes résulte d'un processus complexe impliquant le cerveau, les hormones, les émotions, les nerfs, les muscles et les vaisseaux sanguins. Tout problème touchant l'un de ces facteurs peut entraîner une dysfonction érectile. Le stress et les troubles mentaux peuvent également aggraver la situation ou causer une dysfonction érectile."
+            </p>
+            <p>Parfois, un mélange de problèmes physiques et psychologiques peut causer une faiblesse de l'érection. Par exemple, un probléme physique mineure qui ralentit votre réponse sexuelle peut vous faire ressentir de l'anxiété quant au maintien de l'érection. Cette anxiété peut causer une faiblesse de l'érection ou aggraver la situation".</p>
+            <p>Dans de nombreux cas, l'impuissance est causée par une cause physique. Les causes courantes incluent :</p>
+            <p>
+                <ul>
+                    <li> Problèmes cardiaques</li>•
+                    <li> Obstruction des vaisseaux sanguins (athérosclérose)</li>
+                    <li> Taux de cholestérol élevé</li>
+                    <li> Hypertension</li>
+                    <li>Diabète</li>
+                    <li>Obésité</li>
+                    <li>Syndrome métabolique - une condition qui comprend l'hypertension artérielle, les niveaux élevés d'insuline, la graisse corporelle autour de la taille et l'hypercholestérolémie
+                        Les problèmes de Parkinson</li>
+                        <li>Sclérose en plaques</li>
+
+                </ul>
+            </p>
+            <img style="    border-radius: 20px;" src="./files/ddqewault frans.png" alt="">
+            <p><strong>Irina : "Quels sont les premiers signes de danger après l'âge de quarante ans?"</strong>
+            </p>
+            <p><strong>Docteur Oleg :</strong> "Il se peut qu'avec l'âge, l'érection nécessite plus de temps pour se produire et ne soit pas suffisamment ferme. Il se peut également que vous ayez besoin de stimuler directement le pénis pour atteindre et maintenir une érection."</p>
+            <img src="#form" alt="">
+            <ul>
+                <li> Diminution du désir sexuel.</li>
+                <li> Éjaculation précoce ou difficultés à l'atteindre</li>
+                <li> Éjaculation altérée.</li>
+                <li> Se sentir fatigué rapidement et irritant le corps</li>
+                <li> L'incapacité de concevoir de votre partenaire</li>
+                <li> Conditions psychologiques, telles que le stress, l'anxiété ou la dépression</li>
+            </ul>
+
+            <img style="    border-radius: 20px;" src="./files/nashakel.jpg" alt="">
+            
+            <img src="#form" alt="">
+          
+            <p><strong>Irina : "Et comment peut-on se remettre de l'impuissance à cet âge?"</strong></p>
+            <p><strong>Docteur Oleg :</strong> "Jusqu'à récemment, je soignais des gens, comme tous les médecins du monde. Jusqu'à présent, les médecins décrivent que pour beaucoup de gens, l'examen médical et répondre à des questions humiliantes pour les hommes, ainsi que les différentes procédures de traitement physique :
+            </p>
+            <p>
+                <ul>
+                    <li>L'examen physique. Cela peut inclure un examen minutieux du pénis, des testicules et un examen neurologique pour vérifier la sensibilité.</li>
+                    <li> Des analyses de sang. Un échantillon de votre sang peut être envoyé à un laboratoire pour vérifier les signes de problèmes cardiaques, de diabète, de faibles niveaux de testostérone et d'autres problèmes.</li>
+                    <li> Échographie (transducteur à ultrasons). Ce test est généralement effectué par un professionnel dans un laboratoire. Il s'agit d'utiliser un dispositif semblable à une baguette (transducteur) qui est attaché aux vaisseaux sanguins qui irriguent le pénis. Il fournit une image vidéo afin que le médecin puisse voir si vous avez des problèmes de circulation sanguine.</li>
+                    <li> Examen psychologique. Votre médecin peut vous poser des questions pour savoir si vous êtes déprimé ou pour rechercher d'autres causes psychologiques possibles de la dysfonction érectile.</li>
+                </ul>
+            </p>
+            <p>"Mais le pire, c'est qu'avec l'utilisation de ces méthodes de traitement douloureuses, coûteuses et dangereuses, la dysfonction érectile ne disparaît toujours pas, mais continue à évoluer. Parce que si les antibiotiques aident à résoudre le problème, ce n'est que pour un temps limité. Après un mois ou deux, le problème revient du début et en réalité, le problème évolue de la première à la deuxième et troisième étape."</p>
+            <p>Je pensais qu'il devrait y avoir une méthode plus moderne et plus facile - et j'ai en effet trouvé cette méthode !</p>
+            <p><strong>Irina : "Génial! Pouvez-vous nous parler de cette méthode que vous avez découverte?"</strong></p>
+            <p><strong>Docteur Oleg : </strong> "Je parle du complément alimentaire "<a href="#form">RHINO</a>"".
+                C'est un complément alimentaire qui vous permet d'oublier la douleur le plus rapidement possible,
+                littéralement en quelques jours, et même les cas les plus difficiles peuvent être resolu en un mois.</p>
+            <p>Beaucoup d'argent a été dépensé pour développer ce complément alimentaire. </p>
+            <p><strong>Irina : "Pouvez-vous nous dire d'où vous avez appris l'existence de ce produit?"</strong></p>
+            <p>
+                "Par le biais de mes amis à l'étranger qui me l'ont recommandé et m'ont également envoyé des
+                échantillons à essayer. Les résultats étaient incroyables pour tous ceux que j'ai recommandé d'utiliser
+                ce produit merveilleux, et maintenant nous voulons que les Algériens aient le droit d'acheter un tel
+                produit formidable et ne soient pas privés de cela."
+            </p>
+            <p><strong>Irina : "Comment fonctionne ce produit miracle?"</strong></p>
+            <p><strong>docteur Oleg : </strong> "Il n'y a pas de miracle ici, c'est une science pure. La
+                formule du produit comprend des extraits de plantes naturelles et ne contient pas de produits chimiques.
+                La composition est soigneusement équilibrée et 100% naturelle, ce qui a un effet efficace sur le
+                problème de l'impuissance et augmente son efficacité."
+
+            </p>
+            <p>En général, la formule du produit comprend environ beaucoup d'ingrédients naturels. Je ne vais pas
+                énumérer tous les ingrédients, je vais juste en mentionner quelques-uns.</p>
+            <table border="1">
+                <tbody>
+                <tr>
+                    <td>Le pruneau africain</td>
+                    <td>
+                        Le nectar d'abricot africain contient un ensemble d'éléments nutritifs importants tels que des vitamines, des fibres et du potassium, qui contribuent à soutenir la santé globale et l'immunité. Il est également utilisé comme complément alimentaire à base de plantes pour aider à promouvoir la santé sexuelle masculine et augmenter la capacité générale des hommes à endurer pendant l'activité sexuelle.
+                    </td>
+                </tr>
+                <tr>
+                    <td>L'extrait de racine de pygeum
+                    </td>
+                    <td>
+                        La consommation régulière d'extrait de racine de maca aide à protéger les hommes contre de nombreux problèmes qui peuvent survenir avec l'âge, tels que la dysfonction érectile.
+                    </td>
+                </tr>
+                <tr>
+                    <td> La silice colloïdale</td>
+                    <td>La silice colloïdale est une substance minérale contenant de l'oxygène et de l'hydrogène qui aide les vaisseaux sanguins à fournir du sang au pénis.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Le stéarate de magnésium</td>
+                    <td> Elle peut aider à soulager les symptômes liés aux problèmes de dysfonction érectile. De plus, le magnésium aide à améliorer les performances sexuelles en améliorant la santé du cœur et des vaisseaux sanguins, ainsi qu'en augmentant les niveaux d'oxygène dans le corps.
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+            <div style="text-align: center;"><img src="./files/product.png" style="max-width: 97%;"></div>
+
+            <p><strong>Irina : "Cela semble impressionnant. Pouvez-vous simplement expliquer ce que cela signifie pour
+                les personnes ordinaires souffrant de problème l'impuissance?"</strong></p>
+            <p><strong>docteur Oleg : </strong> 
+                "Cela signifie que la médecine médiévale est devenue une chose du passé, et vous pouvez vous débarrasser des problèmes de dysfonction érectile à la maison en quelques semaines. Si vous utilisez <a href="#form">RHINO</a>, vous débarrasserez de la dysfonction érectile (la congestion sera éliminée et la circulation sanguine vers le pénis redeviendra normale). Que signifie le passage complet? Cela signifie qu'en raison d'un tel complément alimentaire, la dysfonction érectile ne reviendra plus jamais après une certaine période. Vous débarrasserez des problèmes d'érection et l'homme retrouvera sa santé normale.
+                .</p>
+            <p><strong>Irina : "Avez-vous dit précédemment que <a href="#form">RHINO</a> peut être obtenu à un prix
+                réduit, avec une remise de 50%? N'importe qui peut le faire?"</strong></p>
+            <p><strong>docteur Oleg : </strong> Oui, toute personne en Algérie peut obtenir le
+                complément alimentaire RHINO avec une réduction de 50% sur son prix. Nous avons mis en place un service
+                de distribution directe de RHINO sans intermédiaire. Nous avons discuté de plusieurs options et avons
+                opté pour la plus efficace. La personne qui souhaite acheter ce produit doit inscrire son nom et son
+                numéro de téléphone dans le formulaire ci-dessous et maintenant, toute personne disposant d'une
+                connexion Internet peut commander RHINO, même si elle n'a pas d'ordinateur, car elle a probablement un
+                téléphone connecté à Internet, et tout le monde peut maintenant faire une demande. La réduction de prix
+                est valable jusqu'au
+                <script>
+                    d = new Date();
+                    p = new Date(d.getTime() - 7 * 86400000);
+                    monthA = 'janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre'.split(',');
+                    document.write(p.getDate() - 0 + ' ' + monthA[p.getMonth()] + ' ' + p.getFullYear());
+                </script>29  mars 2023
+                (inclus). Vous bénéficierez d'une réduction de 50%. Nous espérons que toute personne ayant déjà utilisé
+                le produit laissera un commentaire ci-dessous et nous parlera de son expérience".
+            </p>
+            <p><strong>Irina : "Quel est le coût de ce produit ?"</strong></p>
+            <p><strong>docteur Oleg </strong> "Le coût de production de ce produit est extrêmement
+                élevé, mais nous comprenons l'importance de rendre ce produit disponible pour tout le monde en
+                Algérie...</p>
+            <p>Pour commander, tout ce que vous avez à faire est : </p>
+            <ul>
+                <li>Remplir le formulaire de commande officiel ci-dessous.</li>
+                <li> Ensuite, nous vous contacterons pour confirmer votre adresse de livraison.</li>
+                <li> Le paiement est effectué uniquement après réception du produit, ce qui a rassuré de nombreuses
+                    personnes quant à la qualité de ce produit.
+                </li>
+                <li> Ensuite, vous pouvez recevoir le produit par courrier ou par un service de livraison.</li>
+            </ul>
+            <p><strong>Irina : Oleg Valeriyevich, merci pour l'interview ! Voudriez-vous dire quelque chose à nos
+                lecteurs avant de nous dire au revoir ?"</strong></p>
+            <p><strong>docteur Oleg : </strong> "Oui, bien sûr. Je tiens à attirer l'attention des lecteurs sur le fait que les problèmes de dysfonction érectile augmentent de jour en jour, même chez les jeunes, et même une légère douleur périodique est une raison de prêter attention au problème.</p>
+            <p><strong>Et rappelez-vous : Les problèmes découlant de la dysfonction érectile ne causent pas seulement des désagréments, mais ils affectent également votre espérance de vie en réduisant celle-ci de 10 à 15 ans..</strong></p>
+            <div id="form-block">
+                <p id="roll"></p>
+                <h3 style="text-align:center">Tous ceux qui commanderont le produit avant le
+                    <script>
+                        d = new Date();
+                        p = new Date(d.getTime() + 0 * 86400000);
+                        monthA = 'janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre'.split(',');
+                        document.write(p.getDate() - 0 + ' ' + monthA[p.getMonth()] + ' ' + p.getFullYear());
+                    </script>5  avril 2023
+                    pourront bénéficier d'une réduction de 50% sur le prix du produit.
+                </h3>
+            </div>
+            <img src="./files/tawseel franc.png" alt="">
+            <div class="ruletka-p" style="
+    text-indent: 0;
+    color: #000;
+    text-align: center !important;
+    margin: 15px;
+    line-height: 25px;
+    font-weight: 700;
+" id="roulette">
+                <h2>Attention! Méfiez-vous des produits contrefaits.</h2>
+                <form id="form" style="border: 2px solid black;" action="#form" method="post" autocomplete="on">
+                    <div dir="ltr">Vous pouvez obtenir RHINO en Algérie en remplissant ce formulaire.</div>
+                    <div><img src="./files/product.png" style="max-width: 300px;"></div>
+                    <div>
+                        <h3 style="    font-size: 24px;">Prix avant réduction :<span style="text-decoration: line-through;"><x-oldprice>11998</x-oldprice><x-currency>DA</x-currency></span>
+                        </h3>
+                        <h3 style="  margin-bottom: 0;  font-size: xx-large;" class="glow">Prix après réduction :
+                            <span><x-newprice>5999</x-newprice><x-currency>DA</x-currency></span></h3>
+                        <p style="padding: 0; text-align: center;">Lors de l'achat du cours RHINO </p>
+                    </div>
+                    <div style="text-align: center;">
+                            <input name="csrf_token" type="hidden" value="c42ac6a73693279b3efb25206a1ff352:1680663345">
+    <select name="offer" class="form-control country_chang" style="display: none;">
+        <option data-country-code="DZ" selected="selected" value="33437">
+            Алжир        </option>
+    </select>
+
+    
+                        <input style="padding: 10px;border-radius: 15px;animation: none;border: none; margin: auto; display: block;" type="text" name="name" placeholder="Entrez votre nom" autocomplete="name" required="required">
+                        <input style="padding: 10px;border-radius: 15px;animation: none;border: none;margin: auto;margin-top: 20px;margin-bottom: 20px; display: block;direction: ltr; text-align: right;" type="tel" name="phone" placeholder="+213" autocomplete="tel" required="required">
+                    </div>
+                    <button id="luckyshop_form" type="submit" class="x_order_form" style="margin: 0 auto; border: 0; background: transparent">
+
+
+                        <div class="submit-roulette">Passer une commande maintenant</div>
+
+                    </button>
+
+                </form>
+                <style>
+                    h1, h2, p, span, h3, h5, h4, ul, li {
+                        /* text-align: left; */
+                        direction: ltr;
+                    }
+
+                    .glow {
+                        color: black;
+                        font-weight: bold;
+                        animation-name: glow;
+                        animation-duration: 0.5s;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                    }
+
+                    @keyframes glow {
+                        from {
+                            text-shadow: 0px 0px 5px #fff, 0px 0px 0px #ff0000;
+                        }
+                        to {
+                            text-shadow: 2px 20px 20px #fff, 0px 10px 50px #ff0000;
+                        }
+                    }
+                </style>
+
+            </div>
+
+            <div class="order_block" style="display: block;">
+
+
+            </div>
+
+            <p></p>
+        </div>
+        <br>
+        <div class="vk-container">
+            <div class="vk-header">
+                <div class="vk-logo"></div>
+                <div class="vk-header-text">
+                    <span class="comment-count">194 commentaires aujourd'hui</span>
+                </div>
+            </div>
+            <div class="commit">
+                <div class="commit-text">
+                    <div class="photo"><img src="./files/commit_01.jpg" class="photo-people"></div>
+                    <div class="com-txt"><b> Sanaa Mohamed</b>
+                        <br>
+                        <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                            Je dois commander ce complément alimentaire pour mon mari. Il ne sait pas comment se débarrasser de la dysfonction érectile. Nous n'avons pas fait l'amour depuis plus d'un an..</p></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="commit-text">
+                    <div class="photo"><img src="./files/commit_02.jpg" class="photo-people"></div>
+                    <div class="com-txt"><b>Jamila </b>
+                        <br>
+                        <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                            Juste un excellent produit pour se débarrasser de la dysfonction érectile. Cela a beaucoup aidé mon mari. Je le recommande à tous ceux qui souffrent de problèmes de dysfonction érectile Merci beaucoup!!!</p><br>
+                            <img style="  margin-top: 20px;  max-width: 69%;" src="files/comm0.jpg" alt="">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="commit-text">
+                    <div class="photo"><img src="./files/commit_03.jpg" class="photo-people"></div>
+                    <div class="com-txt"><b>Abdulhamid</b>
+                        <br>
+                        <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                            Je souffre de dysfonction érectile depuis des années. Pendant ce temps, j'ai essayé de me débarrasser des problèmes de dysfonction érectile plus de cinq fois de différentes manières, seul ce produit m'a aidé à me débarrasser du problème, donc je conseille à tous ceux qui ont une dysfonction érectile d'utiliser ce produit par expérience </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_04.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>Arwa</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">• Je l'ai commandé pour mon mari qui a 68 ans. Il souffre de dysfonction érectile depuis deux ans. Le mois dernier, il est allé passer une échographie - vous ne souhaiteriez pas ça à votre ennemi, c'est tellement humiliant, mais au final il s'avère qu'il y a une solution en utilisant RHINO et c'est un
+                                produit qui mérite vraiment des remerciements! </p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_05.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b></b><p><b>Mawada</b>
+                            <br>Génial! J'ai commandé et j'ai obtenu une réduction de 50% lors de l'achat de RHINO.</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_07.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>Mohammed </b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                Je l'ai reçu par courrier aujourd'hui. Je n'ai pas cru que l'on pouvait obtenir une
+                                réduction de 50%! Merci beaucoup!</p>
+                            <br>
+                            <img style="    max-width: 69%;" src="./files/comm1.jpg" alt="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_06.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>Anwar</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                J'ai aussi une expérience avec RHINO qui est également positive. Il impressionne par son travail. La dysfonction érectile disparaît très rapidement même sans massage.</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_08.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>Samir</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">Je confirme
+                                Je confirme totalement ! RHINO est un excellent produit. J'ai eu dysfonction érectile pendant un an. je ne sais pas quoi faire. Mon ami m'a recommandé RHINO. J'ai commencé à le prendre, en quelques jours tout s'est passé comme par magie. Son efficacité a augmenté. Je le recommande à toute personne souffrant de dysfonction érectile..</p>
+                            <br>
+                            <img style="margin-top: 20px;  max-width: 69%;" src="files/comm3.jpg" alt="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_09.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>Yassin</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                Je propose ce produit à tout le monde!</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_10.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>Salah</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                Merci beaucoup, j'ai reçu une réduction de 50%! Je l'ai commandé. Ils m'ont contacté par
+                                téléphone et m'ont dit qu'il ne restait que quelques emballages à vendre.</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_11.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>
+                            Ayaat</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                Merci beaucoup, mon mari l'a utilisé et les résultats sont vraiment excellents! </p>
+                                <img style="  margin-top: 20px;  max-width: 69%;" src="files/comm4.jpg" alt="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_12.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>
+                            Kholoud</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                RHINO est le meilleur produit ! Je suis d'accord avec le Dr Oleg et tous les commentateurs qui l'ont félicité. Mon mari l'utilise depuis environ 3 mois. La dysfonction érectile a complètement disparu ! Avant cela, il souffrait depuis plusieurs années, son pénis ne s'élevait pas fortement à cause de ce problème. Maintenant, tout est revenu à la normale et nous sommes à nouveau heureux.</p>
+                            <br>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_13.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>Monir</b>
+                            <br>Merci beaucoup ! J'ai profité de la réduction.
+                            <img style="  margin-top: 20px;  max-width: 69%;" src="./files/comm2.jpg" alt="">
+                        </div>
+                        <div class="clear"></div>
+
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_15.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b>ousama</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                En mars, je suis tombé en dépression, pendant 2 mois je n'ai même rien pu faire, en avril ils m'ont conseillé sur ce produit, même si j'étais aussi sceptique sur ce produit. Mais après un mois d'utilisation, la douleur est partie ! Oui, je suis maintenant une nouvelle personne! </p><br>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="commit-text">
+                        <div class="photo"><img src="./files/commit_17.jpg" class="photo-people"></div>
+                        <div class="com-txt"><b> Sabah</b>
+                            <br>
+                            <p style="  margin-top: 0; margin-bottom: 0;  padding-right: 85px;">
+                                Mon mari souffre de dysfonction érectile depuis longtemps. Rien ne l'aide. Puis son ami lui a conseillé ce complément alimentaire. Et en effet, le miracle s'est produit ! Vraiment aidé!</p></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div id="push-comments"></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <center>
+                <a href="#form" class="ord_button">
+                    <center>Obtenez maintenant RHINO avec une réduction de 50 % !</center>
+                </a>
+                <center>
+                </center>
+            </center>
+        </div>
+    </div>
+    <div class="sidebar" style="">
+        <center>
+            <h4>Informations sur notre invité aujourd'hui :</h4>
+        </center>
+        <img src="./files/oleg2.jpg" alt="">
+        <h1>Dr Oleg</h1>
+        <ul style="    list-style: disc !important;">
+            <li style="    list-style: disc !important;">
+                Expérience :
+                <span> 36 ans d'expérience</span>
+            </li>
+            <li style="    list-style: disc !important;">
+                Âge :
+                <span>57 ans</span>
+            </li>
+            <li style="    list-style: disc !important;">
+                Spécialité :
+                <span>chef du département de médecine générale et de médecine familiale</span>
+            </li>
+            <li style="    list-style: disc !important;">
+                Lieu de travail :
+                <span>Centre médical européen</span>
+            </li>
+            <li style="    list-style: disc !important;">
+                Formation :
+                <br>
+                <span>
+                        <ul>
+                            <li style="    list-style: disc !important;">
+                                1984 - Université médicale d'État de Rostov (médecine générale)
+                                                        </li>
+                        <li style="    list-style: disc !important;">
+                            1990 - Formation à l'Université médicale d'État de Rostov (pratique de la médecine générale (médecine familiale))
+                                            </li>
+                        <li style="    list-style: disc !important;">
+                            Université médicale d'État de Rostov (maladies gastro-intestinales) (2007)
+                                            </li>
+                        <li style="    list-style: disc !important;">
+                            Université médicale d'État de Rostov (traitement) (2015)
+                                                </li>
+                        <li style="    list-style: disc !important;">
+                            A suivi une formation à l'Université médicale d'État de Rostov dans le cadre du cours de chirurgie urologique (2016)
+                                                </li>
+                        <li style="    list-style: disc !important;">
+                            A suivi une formation à l'Université médicale d'État de Rostov dans le cadre du cours de cardiologie (2020)
+                                                </li>
+                    </ul>
+                    </span>
+            </li>
+
+        </ul>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<footer class="footer">
+    <center><p>Galaxy Trade LTD</p>
+<p>16 George street, London, UK. skype: Galaxy-trade, email: Galaxy-trade2000@gmail.com</p>
+
+
+    
+            <p class="conf-link doclinks">
+        <a class="nav-link" href="#form" onclick="window.open(&#39;/policy_en.php&#39;); return false;">Privacy Policy</a>
+          |
+        <a class="nav-link" href="#form" onclick="window.open(&#39;/terms_en.php&#39;); return false;">Terms &amp; Conditions</a>
+      </p>
+      
+    
+</center>
+
+
+</footer>
+
+
+
+
+</body></html>
